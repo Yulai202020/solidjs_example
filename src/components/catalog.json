@@ -1,0 +1,24 @@
+{
+    "catalog1": [
+        {
+            "title": "some title",
+            "link": "https://www.youtube.com/embed/IsHBsbnyt0Q",
+            "description": "from catalog1"
+        }
+    ],
+
+    "catalog2": [
+        {
+            "title": "some title",
+            "link": "https://www.youtube.com/embed/IsHBsbnyt0Q",
+            "description": "from catalog2"
+        }
+    ],
+    "catalog3": [
+        {
+            "title": "some title",
+            "link": "https://www.youtube.com/embed/IsHBsbnyt0Q",
+            "description": "from catalog3"
+        }
+    ]
+}
