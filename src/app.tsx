@@ -1,22 +1,31 @@
 import { Router, Routes, Route, Link } from 'solid-app-router';
 import Home from './components/Home';
-import About from './components/About';
+import style from "./Navigation.module.scss";
+import Catalog from './components/Catalog';
+import "./std.scss";
+import config from "./components/catalog.json";
 
 const App = () => {
   return (
     // <Router>
     //   <div>
-    //     <nav>
-    //       <Link href="/">Home</Link>
-    //       <Link href="/about">About</Link>
+    //     <nav class={style.navList}>
+    //       {Object.keys(config).map((key) => (
+    //         <li><a href={`/catalogs?catalog=${key}`}>{key}</a></li>
+    //       ))}
     //     </nav>
     //     {/* <Routes> */}
-    //       <Route path="/" component={Home} />
-    //       <Route path="/about" component={About} />
+    //       <Route path="/" element={<Home />} />
+    //       <Route path="/catalogs" element={<Catalog />} />
     //     {/* </Routes> */}
     //   </div>
     // </Router>
     <>
+    <nav class={style.navList}>
+      {Object.keys(config).map((key) => (
+        <li><a href={`/catalogs?catalog=${key}`}>{key}</a></li>
+      ))}
+    </nav>
     <Home />
     </>
   );

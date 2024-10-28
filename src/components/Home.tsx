@@ -20,7 +20,6 @@ const Home = () => {
     loadAllCatalogs();
 
     return (
-        <>
         <div class="container">
             {catalogItems().map((item) => (
                 <div class="card">
@@ -31,7 +30,6 @@ const Home = () => {
                 </div>
             ))}
         </div>
-        </>
     );
 };
 

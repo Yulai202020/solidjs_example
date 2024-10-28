@@ -10,7 +10,6 @@ const Catalog = () => {
     const queryData = queryParams.get('data') ?? "";
 
     return (
-        <>
         <div class="container">
             {queryData && config[queryData] ? (
                 config[queryData].map((item) => (
@@ -26,7 +25,6 @@ const Catalog = () => {
                 </>
             )}
         </div>
-        </>
     );
 };
 
