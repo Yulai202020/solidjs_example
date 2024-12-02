@@ -7,27 +7,21 @@ import config from "./components/catalog.json";
 
 const App = () => {
   return (
-    // <Router>
-    //   <div>
-    //     <nav class={style.navList}>
-    //       {Object.keys(config).map((key) => (
-    //         <li><a href={`/catalogs?catalog=${key}`}>{key}</a></li>
-    //       ))}
-    //     </nav>
-    //     {/* <Routes> */}
-    //       <Route path="/" element={<Home />} />
-    //       <Route path="/catalogs" element={<Catalog />} />
-    //     {/* </Routes> */}
-    //   </div>
-    // </Router>
-    <>
-    <nav class={style.navList}>
-      {Object.keys(config).map((key) => (
-        <li><a href={`/catalogs?catalog=${key}`}>{key}</a></li>
-      ))}
-    </nav>
-    <Home />
-    </>
+    <Router>
+      <nav class={style.navList}>
+        <ul>
+          {Object.keys(config).map((key) => (
+            <li key={key}>
+              <Link href={`/catalogs?catalog=${key}`}>{key}</Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/catalogs" element={<Catalog />} />
+      </Routes>
+    </Router>
   );
 };
 
